@@ -1,0 +1,10 @@
+.item {
+  padding: 3px;
+  margin: 10px auto 10px auto;
+  width: 50%;
+}
+.view-title{
+    margin: 0 auto 20px auto ;
+    width: 50%;
+    text-align: center;
+}

@@ -1,0 +1,33 @@
+<!-- edit-employee.component.html -->
+  <form class="form-container" [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    <div class="field-container">
+      <div class="edit-title">
+        <h2>Edit Employee</h2>
+      </div>
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" required />
+        <mat-error *ngIf="editForm.get('name')?.hasError('required')">
+          Name is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Age</mat-label>
+        <input matInput formControlName="age" required type="number" />
+        <mat-error *ngIf="editForm.get('age')?.hasError('required')">
+          Age is required
+        </mat-error>
+      </mat-form-field>
+
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        color="accent"
+        [disabled]="editForm.invalid"
+      >
+        Update Employee
+      </button>
+    </div>
+  </form>

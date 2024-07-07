@@ -1,0 +1,27 @@
+<div
+  class="employee-item mat-card"
+  fxLayout="row"
+  fxLayoutAlign="start center"
+>
+  <mat-card-header fxFlex="60%"
+  [@hoverAnimation]="cardState"
+  (mouseenter)="onMouseEnter()"
+  (mouseleave)="onMouseLeave()"
+  >
+    <mat-card-title>{{ employee?.name }}</mat-card-title>
+  </mat-card-header>
+  <div fxFlex="20%" fxLayout="row" fxLayoutAlign="center center">
+    <button
+      mat-raised-button
+      color="warn"
+      (click)="deleteEmployee(employee?.id!)"
+    >
+      DELETE
+    </button>
+  </div>
+  <div fxFlex="20%" fxLayout="row" fxLayoutAlign="center center">
+    <button mat-raised-button color="primary" (click)="navigate(employee?.id!)">
+      EDIT
+    </button>
+  </div>
+</div>

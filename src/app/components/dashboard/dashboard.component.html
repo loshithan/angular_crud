@@ -1,0 +1,16 @@
+<div class="view-title">
+  <h2>View Employees</h2>
+  <div class="nav">
+    <a href="/add">
+      <button mat-raised-button color="primary"><mat-icon>add</mat-icon>Add</button>
+    </a>
+  </div>
+</div>
+<div *ngFor="let employee of employees">
+  <mat-card class="item">
+    <app-employee-item
+      [employee]="employee"
+      (deletionComplete)="onDeleteComplete()"
+    ></app-employee-item
+  ></mat-card>
+</div>

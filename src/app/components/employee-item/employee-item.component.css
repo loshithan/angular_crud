@@ -1,0 +1,5 @@
+.employee-item{
+    margin: '20px' !important;
+    transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
+
+}

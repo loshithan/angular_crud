@@ -1,0 +1,14 @@
+.field-container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto 0 auto;
+    row-gap: 5px;
+}
+.form-container{
+    width: 50%;
+    margin: 0 auto 0 auto;
+}
+.add-title{
+    margin:0 auto 0 auto; ;
+}
